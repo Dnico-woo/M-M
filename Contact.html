@@ -43,16 +43,17 @@
     <div class="form-container">
       <div class="subtitle">Tell us about you:</div>
       <div class="contact-box">
-        <form>
-          <input type="name" class="input-field" placeholder="Your Name*" />
-          <input type="email" class="input-field" placeholder="Your Email*" />
-          <input type="text" class="input-field" placeholder="Subject" />
+        <form method="post" action="contactform.php">
+          <input type="name" class="input-field" placeholder="Your Name*" name="name" required/>
+          <input type="email" class="input-field" placeholder="Your Email*" name="email" required/>
           <textarea
             type="text"
             class="input-field textarea-field"
             placeholder="Your Message*"
+            name="message"
+            required
           ></textarea>
-          <button type="button" class="btn">Send Message</button>
+          <input type="submit" class="btn" value="Send Message"/>
         </form>
         <div class="required">(*)required</div>
       </div>
