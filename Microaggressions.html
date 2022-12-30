@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Microaggressions: The M&M Project</title>
+    <link rel="stylesheet" href="page-layout.css" />
+    <link rel="stylesheet" href="image-layout.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a class="nav_logo" href="/"
+        ><img src="images/logo.png" id="logo-mobile"
+      /></a>
+      <div class="navbar__container">
+        <a class="nav_logo" href="/"><img src="images/logo.png" id="logo" /></a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="About.html" class="navbar__links">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="Microaggressions.html" class="navbar__links">Microaggressions</a>
+          </li>
+          <li class="navbar__item">
+            <a href="Microaffirmations.html" class="navbar__links">Microaffirmations</a>
+          </li>
+          <li class="navbar__item">
+            <a href="Contact.html" class="navbar__links">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="title">Microaggressions</div>
+    <div class="line"></div>
+    <div class="images"></div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <button id="close-button" class="close-button"><img id="close-icon" src="icons/ios-close-white.png"></button>
+        <div class="modal-container">
+          <div><button id="prev-button" class="prev-button"><img id="prev-icon" src="icons/ios-arrow-back-white.png"></button></div>
+          <div class="it-container">
+            <img id="modal-image" src="../people/1.jpg" alt="image 1" />
+            <div id="modal-text"></div>
+          </div>
+          <div><button id="next-button" class="next-button"><img id="next-icon" src="icons/ios-arrow-forward-white.png"></button></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-container">
+        <div class="footer-title">The M&M Project</div>
+        <div class="footer-body">Thanks For Reading. It makes a Difference</div>
+      </div>
+    </div>
+    <script src="images.js"></script>
+    <script src="modal.js"></script>
+    <script src="menu.js"></script>
+  </body>
+</html>

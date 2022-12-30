@@ -1,0 +1,152 @@
+.images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 150px;
+  margin-top: 0px;
+  margin-bottom: 200px;
+  grid-gap: 24px;
+}
+
+.image-container {
+  aspect-ratio: 4/5;
+  width: 100%;
+  height: auto;
+}
+
+.img-gallery {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.img-gallery:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 50px;
+  }
+
+  .img-gallery {
+    border-radius: 12px;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  background-color: transparent;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  animation-name: modalFade;
+  animation-duration: 0.2s;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  position: relative;
+  margin: 10vh auto;
+  align-items: center;
+  grid-template-columns: 0.028fr 1fr 0.028fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.it-container {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  margin: auto;
+  padding: 0;
+  width: 77vw;
+  height: 80vh;
+  max-width: 1800px;
+}
+
+.it-container #modal-image {
+  width: 60%;
+  max-width: 760px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px 0px 0px 24px;
+}
+
+.it-container #modal-text {
+  width: 40%;
+  justify-self: right;
+  background-color: #fff;
+  border-radius: 0px 24px 24px 0px;
+}
+
+.close-button,
+.prev-button,
+.next-button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.close-button:hover,
+.prev-button:hover,
+.next-button:hover {
+  cursor: pointer;
+}
+
+.close-button{
+  right: 0px;
+  top: 0px;
+  margin: 34px;
+}
+
+.close-button #close-icon{
+  width: 18px;
+  height: 18px;
+}
+
+.prev-button #prev-icon{
+  width: 20px;
+  height: 35px;
+}
+
+.next-button #next-icon{
+  width: 20px;
+  height: 35px;
+}
